@@ -1,0 +1,35 @@
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 54px;
+  color: #868F9B;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+html, body {
+  height: 100%;
+}
+
+.vertical-center {
+  height:100%;
+  width:100%;
+
+  text-align: center;  /* align the inline(-block) elements horizontally */
+  font: 0/0 a;         /* remove the gap between inline(-block) elements */
+}
+
+.form-control {
+  width: 30%;
+  margin-left: 35%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.vertical-center > .container-fluid {
+  max-width: 100%;
+  background-color: white;
+
+  display: inline-block;
+  vertical-align: middle;  /* vertical alignment of the inline element */
+}
