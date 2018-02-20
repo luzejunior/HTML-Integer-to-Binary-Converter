@@ -22,13 +22,17 @@ html, body {
 .form-control {
   width: 30%;
   margin-left: 35%;
-  margin-bottom: 20px;
   text-align: center;
 }
 
+.padding-bottom {
+  margin-bottom: 20px;
+}
+
 .vertical-center > .container-fluid {
-  max-width: 100%;
+  max-width: 80%;
   background-color: white;
+  border-radius: 50px;
 
   display: inline-block;
   vertical-align: middle;  /* vertical alignment of the inline element */
