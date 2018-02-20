@@ -11,10 +11,10 @@ function convert() {
 	if (!integerValue.value.includes(".")) {
 		textResult.innerHTML = calculate(integerValue.value)
 	} else {
-		let separateNumber = integerValue.value.split('.');
-		textResult.innerHTML = calculate(separateNumber[0])
+		let splitNumber = integerValue.value.split('.');
+		textResult.innerHTML = calculate(splitNumber[0])
 		textResult.innerHTML += "."
-		textResult.innerHTML += calculateDecimal(separateNumber[1])
+		textResult.innerHTML += calculateDecimal(splitNumber[1])
 	}
 }
 
