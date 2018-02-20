@@ -8,13 +8,45 @@ function convert() {
 		return
 	}
 
-	var value = integerValue.value
-	while (value > 0) {
-		var remainder = value%2
-		textResult.innerHTML += remainder
-		value = Math.floor(value/2)
-		console.log(value)
+	if (!integerValue.value.includes(".")) {
+		textResult.innerHTML = calculate(integerValue.value)
+	} else {
+		let separateNumber = integerValue.value.split('.');
+		textResult.innerHTML = calculate(separateNumber[0])
+		textResult.innerHTML += "."
+		textResult.innerHTML += calculateDecimal(separateNumber[1])
+	}
+}
+
+function calculate(value) {
+	var auxText = ""
+
+	if (value == 0) {
+		return "0"
 	}
 
-	textResult.innerHTML = textResult.innerHTML.split("").reverse().join("");
+	while (value > 0) {
+		var remainder = value % 2
+		auxText += remainder
+		value = Math.floor(value / 2)
+	}
+
+	return auxText.split("").reverse().join("");
+}
+
+function calculateDecimal(value) {
+	var auxText = ""
+	value = parseFloat("0." + value)
+
+	while (value != 0.0) {
+		value = value * 2
+		if (value >= 1.0) {
+			auxText += "1"
+			value = value - 1
+		} else {
+			auxText += "0"
+		}
+	}
+
+	return auxText
 }
